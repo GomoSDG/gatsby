@@ -1,3 +1,13 @@
-(ns gatsby.core)
+(ns gatsby.core
+  (:require [reagent.core :as r]
+            [reagent.dom :as rdom]
+            [re-frame.core :as re-frame]
+            [gatsby.views :as views]))
 
-(js/console.log "This is live reload!")
+(defn mount-root []
+  (js/console.log "Gatsby is running!")
+  (re-frame/clear-subscription-cache!)
+  (rdom/render [views/app-root]
+               (.getElementById js/document "app")))
+
+

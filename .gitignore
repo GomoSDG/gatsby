@@ -4,3 +4,7 @@ trace.edn
 target/
 .shadow-cljs
 node_modules
+resources/dev/public/js
+resources/prod/public/js
+resources/test/public/js
+.nrepl-port

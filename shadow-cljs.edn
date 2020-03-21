@@ -5,7 +5,8 @@
   "src/test"]
 
  :dependencies
- []
+ [[re-frame "0.12.0"]
+  [secretary "1.2.3"]]
 
  :builds
  {:dev {:target :browser
@@ -13,4 +14,5 @@
         :asset-path "."
         :modules {:main {:entries [gatsby.core]}}
         :devtools {:http-root "resources/dev/public"
-                   :http-port 8280}}}}
+                   :http-port 8280
+                   :after-load gatsby.core/mount-root}}}}
