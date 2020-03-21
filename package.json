@@ -1,0 +1,23 @@
+{
+  "name": "gatsby",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "shadow-cljs": "^2.8.93"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GomoSDG/gatsby.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GomoSDG/gatsby/issues"
+  },
+  "homepage": "https://github.com/GomoSDG/gatsby#readme"
+}

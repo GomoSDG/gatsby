@@ -1,0 +1,16 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ []
+
+ :builds
+ {:dev {:target :browser
+        :output-dir "resources/dev/public/js"
+        :asset-path "."
+        :modules {:main {:entries [gatsby.core]}}
+        :devtools {:http-root "resources/dev/public"
+                   :http-port 8280}}}}

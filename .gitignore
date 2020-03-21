@@ -2,3 +2,5 @@ trace.edn
 .cpcache/
 .rebel_readline_history
 target/
+.shadow-cljs
+node_modules
