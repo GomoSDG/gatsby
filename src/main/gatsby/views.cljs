@@ -1,5 +1,5 @@
 (ns gatsby.views
-  (:require [re-frame.core :as re-frame]
+  (:require [re-frame.core :as re]
             [gatsby.components :refer [income-list]]))
 
 (defn nav-bar
@@ -15,7 +15,7 @@
   [:<>
    [:div.columns
     [:div.column.is-one-quarter
-     [income-list [""]]]]])
+     [income-list @(re/subscribe [:salaries])]]]])
 
 (defn app-view
   [page-id]
