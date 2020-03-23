@@ -12,6 +12,7 @@
 
 (defn home
   []
+  (js/console.log (clj->js @(re/subscribe [:salaries])))
   [:<>
    [:div.columns
     [:div.column.is-one-quarter
