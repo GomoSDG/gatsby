@@ -1,6 +1,6 @@
 (ns gatsby.views
   (:require [re-frame.core :as re]
-            [gatsby.components :refer [income-list]]))
+            [gatsby.components :refer [money-summary]]))
 
 (defn nav-bar
   []
@@ -12,11 +12,12 @@
 
 (defn home
   []
-  (js/console.log (clj->js @(re/subscribe [:salaries])))
   [:<>
    [:div.columns
     [:div.column.is-one-quarter
-     [income-list @(re/subscribe [:salaries])]]]])
+     [money-summary "Income" "Income" @(re/subscribe [:salaries]) :add-income :delete-income :update-income]]
+    [:div.column.is-one-quarter
+     [money-summary "Expenses" "Expense" @(re/subscribe [:expenses]) :add-expense :delete-expense :update-expense]]]])
 
 (defn app-view
   [page-id]

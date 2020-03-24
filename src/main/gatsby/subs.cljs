@@ -6,3 +6,8 @@
  :salaries
  (fn [db _]
    (:salaries db)))
+
+(re/reg-sub
+ :expenses
+ (fn [db _]
+  (:expenses db)))
